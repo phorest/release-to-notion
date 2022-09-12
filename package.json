@@ -2,9 +2,10 @@
   "name": "publish-release-to-notion",
   "version": "0.0.1",
   "description": "GitHub action to publish release information to a Notion database",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "lint": "eslint .",
+    "build": "npx ncc build index.js --license licenses.txt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +15,7 @@
     "@actions/github": "^5.0.3"
   },
   "devDependencies": {
+    "@vercel/ncc": "^0.34.0",
     "eslint": "^8.23.1"
   }
 }
