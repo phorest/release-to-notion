@@ -1,0 +1,12 @@
+name: "Publish release to Notion"
+description: "Creates a new page in an existing database with release information"
+inputs:
+  token:
+    description: "Notion API token"
+    required: true
+  database-id:
+    description: "Notion database ID"
+    required: true
+runs:
+  using: "node16"
+  main: "index.js"
