@@ -16,6 +16,21 @@ inputs:
   date-id:
     description: ""
     required: true
+  mac-download-id:
+    description: ""
+    required: false
+  win-download-id:
+    description: ""
+    required: false
+  base-download-url:
+    description: ""
+    required: false
+  mac-file-path:
+    description: ""
+    required: false
+  win-file-path:
+    description: ""
+    required: false
 runs:
   using: "node16"
   main: "dist/index.js"
