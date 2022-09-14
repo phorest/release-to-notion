@@ -23428,6 +23428,10 @@ const { markdownToBlocks } = __nccwpck_require__(6615);
     const token = core.getInput('token', { required: true });
     const databaseId = core.getInput('database-id', { required: true });
 
+    const nameFieldId = core.getInput('name-id', { required: true });
+    const versionFieldId = core.getInput('version-id', { required: true });
+    const dateFieldId = core.getInput('date-id', { required: true });
+
     const notion = new Client({ auth: token });
 
     const context = github.context;
@@ -23447,7 +23451,7 @@ const { markdownToBlocks } = __nccwpck_require__(6615);
         database_id: databaseId,
       },
       properties: {
-        Name: {
+        [nameFieldId]: {
           title: [
             {
               type: 'text',
@@ -23457,7 +23461,7 @@ const { markdownToBlocks } = __nccwpck_require__(6615);
             },
           ],
         },
-        Version: {
+        [versionFieldId]: {
           rich_text: [
             {
               type: 'text',
@@ -23467,7 +23471,7 @@ const { markdownToBlocks } = __nccwpck_require__(6615);
             },
           ],
         },
-        Date: {
+        [dateFieldId]: {
           type: 'date',
           date: {
             start: releaseDate.split('T')[0],

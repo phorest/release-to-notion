@@ -7,6 +7,15 @@ inputs:
   database-id:
     description: "Notion database ID"
     required: true
+  name-id:
+    description: ""
+    required: true
+  version-id:
+    description: ""
+    required: true
+  date-id:
+    description: ""
+    required: true
 runs:
   using: "node16"
   main: "dist/index.js"
