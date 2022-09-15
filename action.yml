@@ -8,28 +8,28 @@ inputs:
     description: "Notion database ID"
     required: true
   name-id:
-    description: ""
+    description: "ID of the name column"
     required: true
   version-id:
-    description: ""
+    description: "ID of the version column"
     required: true
   date-id:
-    description: ""
+    description: "ID of the date column"
     required: true
   mac-download-id:
-    description: ""
+    description: "ID of the macOS download URL column"
     required: false
   win-download-id:
-    description: ""
+    description: "ID of the Windows download URL column"
     required: false
   base-download-url:
-    description: ""
+    description: "Download URL"
     required: false
   mac-file-path:
-    description: ""
+    description: "Filename of the macOS package. {{version}} will be replaced with the app's version"
     required: false
   win-file-path:
-    description: ""
+    description: "Filename of the Windows package. {{version}} will be replaced with the app's version"
     required: false
 runs:
   using: "node16"
