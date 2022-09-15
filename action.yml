@@ -1,5 +1,8 @@
 name: "Publish release to Notion"
 description: "Creates a new page in an existing database with release information"
+branding:
+  icon: edit
+  color: purple
 inputs:
   token:
     description: "Notion API token"
